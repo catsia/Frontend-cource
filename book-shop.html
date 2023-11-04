@@ -10,6 +10,14 @@
 </head>
 
 <body>
+  <div class="catalog-sort">
+    <input class="catalog-sort_hide-checkbox" type="checkbox" id="catalog-sort_hide-checkbox">
+    <label for="catalog-sort_hide-checkbox">Show hidden</label>
+    <button class="catalog-sort__sort-button all active">All</button>
+    <button class="catalog-sort__sort-button favourite">Favourite</button>
+    <button class="catalog-sort__sort-button comparison">Comparison</button>
+  </div>
+
   <div class="catalog-grid">
     <article class="catalog-item">
       <div class="catalog-item__image">
@@ -35,9 +43,9 @@
         </div>
       </div>
       <div class="catalog-item__hover-buttons">
-        <button class="catalog-item__hover-button active"><i class="fa-regular fa-eye"></i></button>
-        <button class="catalog-item__hover-button"> <i class="fa-regular fa-heart"></i></button>
-        <button class="catalog-item__hover-button"> <i class="fa-solid fa-scale-balanced"></i></button>
+        <button class="catalog-item__hover-button hide"><i class="fa-regular fa-eye"></i></button>
+        <button class="catalog-item__hover-button favourite"> <i class="fa-regular fa-heart"></i></button>
+        <button class="catalog-item__hover-button comparison"> <i class="fa-solid fa-scale-balanced"></i></button>
       </div>
     </article>
 
@@ -64,9 +72,9 @@
         </div>
       </div>
       <div class="catalog-item__hover-buttons">
-        <button class="catalog-item__hover-button"><i class="fa-regular fa-eye"></i></button>
-        <button class="catalog-item__hover-button"> <i class="fa-regular fa-heart"></i></button>
-        <button class="catalog-item__hover-button"> <i class="fa-solid fa-scale-balanced"></i></button>
+        <button class="catalog-item__hover-button hide"><i class="fa-regular fa-eye"></i></button>
+        <button class="catalog-item__hover-button favourite"> <i class="fa-regular fa-heart"></i></button>
+        <button class="catalog-item__hover-button comparison"> <i class="fa-solid fa-scale-balanced"></i></button>
       </div>
     </article>
 
@@ -93,9 +101,9 @@
         </div>
       </div>
       <div class="catalog-item__hover-buttons">
-        <button class="catalog-item__hover-button"><i class="fa-regular fa-eye"></i></button>
-        <button class="catalog-item__hover-button active"> <i class="fa-regular fa-heart"></i></button>
-        <button class="catalog-item__hover-button"> <i class="fa-solid fa-scale-balanced"></i></button>
+        <button class="catalog-item__hover-button hide"><i class="fa-regular fa-eye"></i></button>
+        <button class="catalog-item__hover-button favourite"> <i class="fa-regular fa-heart"></i></button>
+        <button class="catalog-item__hover-button comparison"> <i class="fa-solid fa-scale-balanced"></i></button>
       </div>
     </article>
 
@@ -122,12 +130,11 @@
         </div>
       </div>
       <div class="catalog-item__hover-buttons">
-        <button class="catalog-item__hover-button"><i class="fa-regular fa-eye"></i></button>
-        <button class="catalog-item__hover-button"> <i class="fa-regular fa-heart"></i></button>
-        <button class="catalog-item__hover-button"> <i class="fa-solid fa-scale-balanced"></i></button>
+        <button class="catalog-item__hover-button hide"><i class="fa-regular fa-eye"></i></button>
+        <button class="catalog-item__hover-button favourite"> <i class="fa-regular fa-heart"></i></button>
+        <button class="catalog-item__hover-button comparison"> <i class="fa-solid fa-scale-balanced"></i></button>
       </div>
     </article>
-
 
     <article class="catalog-item">
       <div class="catalog-item__image">
@@ -152,10 +159,12 @@
         </div>
       </div>
       <div class="catalog-item__hover-buttons">
-        <button class="catalog-item__hover-button"><i class="fa-regular fa-eye"></i></button>
-        <button class="catalog-item__hover-button active"> <i class="fa-regular fa-heart"></i></button>
-        <button class="catalog-item__hover-button active"> <i class="fa-solid fa-scale-balanced"></i></button>
+        <button class="catalog-item__hover-button hide"><i class="fa-regular fa-eye"></i></button>
+        <button class="catalog-item__hover-button favourite"> <i class="fa-regular fa-heart"></i></button>
+        <button class="catalog-item__hover-button comparison"> <i class="fa-solid fa-scale-balanced"></i></button>
       </div>
     </article>
   </div>
+
+  <script src="js/sort-buttons.js"></script>
 </body>
