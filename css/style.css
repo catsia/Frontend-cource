@@ -1,0 +1,304 @@
+.catalog-grid {
+  font-family: 'Roboto';
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.catalog-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fff;
+  border: 15px solid #ccc;
+  width: calc(30.33% - 1rem);
+  margin-bottom: 1rem;
+}
+
+.catalog-item__image {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.catalog-item__image img {
+  width: 70%;
+  height: auto;
+}
+
+.catalog-item__price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.catalog-item__type {
+  font-size: 1rem;
+  color: #ccc;
+  transition: transform 0.3s ease;
+}
+
+.catalog-item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  height: calc(100% - 4rem);
+}
+
+.catalog-item:hover .catalog-item__type {
+  transform: translateY(-280%);
+  background-color: white;
+}
+
+.catalog-item:hover .star {
+  transform: translateY(-240%);
+}
+
+.catalog-item:hover .catalog-item__title {
+  transform: translateY(-340%);
+}
+
+.catalog-item:hover .catalog-item__description {
+  transform: translateY(-400%);
+}
+
+.catalog-item:hover .catalog-item__price {
+  transform: translateY(-400%);
+}
+
+.catalog-item:hover .catalog-item__button {
+  opacity: 1;
+}
+
+.catalog-item:hover .catalog-item__button-box {
+  opacity: 1;
+}
+
+.catalog-item__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.catalog-item__description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.catalog-item__button {
+  position: absolute;
+  width: 60%;
+  height: 50%;
+  display: block;
+  background-color: #7CB9E8;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  left: 20%;
+  top: 20%;
+  margin-right: -20%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.catalog-item__button-box {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ccc;
+  height: 100px;
+  width: 100%;
+  opacity: 0;
+}
+
+.catalog-item__button:hover {
+  background-color: rgb(73, 149, 206);
+}
+
+.catalog-item__hover-button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.catalog-item__hover-button.active {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 50%;
+  background-color: #8ce967;
+  font-size: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+
+.catalog-item__hover-button:hover {
+  background-color: #afaaaa;
+}
+
+.catalog-item__hover-button.active:hover {
+  background-color: #44852c;
+}
+
+.catalog-item__hover-buttons {
+  position: absolute;
+  top: 10;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.catalog-item:hover .catalog-item__hover-button {
+  opacity: 1;
+}
+
+.catalog-item__hover-button::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 0;
+  height: 0;
+}
+
+.catalog-item__hover-button::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 0;
+  height: 0;
+}
+
+.rating {
+  color: #ccc;
+  transition: transform 0.3s ease;
+}
+
+
+.star {
+  font-size: x-large;
+  width: 50px;
+  display: inline-block;
+  margin-right: -20px;
+  color: gray;
+  transition: transform 0.3s ease;
+}
+
+.star:last-child {
+  margin-right: 0;
+}
+
+.star:before {
+  content: '\2605';
+}
+
+.star.on {
+  color: gold;
+}
+
+.star.one:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -20px;
+  width: 2px;
+  overflow: hidden;
+}
+
+.star.two:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -20px;
+  width: 4px;
+  overflow: hidden;
+}
+
+.star.tree:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -20px;
+  width: 6px;
+  overflow: hidden;
+}
+
+.star.four:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -20px;
+  width: 8px;
+  overflow: hidden;
+}
+
+.star.five:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -20px;
+  width: 10px;
+  overflow: hidden;
+}
+
+.star.six:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -20px;
+  width: 12px;
+  overflow: hidden;
+}
+
+.star.seven:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -20px;
+  width: 14px;
+  overflow: hidden;
+}
+
+.star.eight:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -20px;
+  width: 16px;
+  overflow: hidden;
+}
+
+.star.nine:after {
+  content: '\2605';
+  color: gold;
+  position: absolute;
+  margin-left: -20px;
+  width: 18px;
+  overflow: hidden;
+}
