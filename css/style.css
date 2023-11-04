@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .catalog-item {
@@ -14,19 +14,29 @@
   text-align: center;
   background-color: #fff;
   border: 15px solid #ccc;
-  width: calc(30.33% - 1rem);
+  width: calc(20.33% - 1rem);
+  min-width: 250px;
   margin-bottom: 1rem;
 }
+
 
 .catalog-sort {
   font-family: 'Roboto';
   font-weight: bold;
   font-size: 1.2rem;
+  background-color: aliceblue;
+  border-radius: 20px 20px 150px 150px;
+  top: 0;
+  width: auto;
+  position: -webkit-sticky;
+  position: sticky;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 10px;
+  padding-top: 10px;
   padding-bottom: 10px;
+  z-index: 1;
 }
 
 .catalog-sort__sort-button {
@@ -37,7 +47,9 @@
   background-color: #7CB9E8;
   color: #fff;
   border: none;
+  border-radius: 0.25em;
   width: calc(10.33% - 1rem);
+  min-width: fit-content;
   height: 30px;
   cursor: pointer;
 }
@@ -111,11 +123,10 @@
 }
 
 .catalog-item__image img {
-  width: 70%;
-  height: auto;
+  max-width: 70%;
 }
 
-.catalog-item__price {
+.price {
   font-size: 1.2rem;
   font-weight: bold;
   transition: transform 0.3s ease;
@@ -133,6 +144,26 @@
   justify-content: flex-end;
   padding: 1rem;
   height: calc(100% - 4rem);
+}
+
+.crossed {
+  text-decoration: line-through;
+}
+
+.sale {
+  color: red;
+}
+
+.new::after {
+  font-family: 'Roboto';
+  font-size: 1rem;
+  content: "New";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #0b76ef;
+  color: white;
+  padding: 4px;
 }
 
 .catalog-item:hover .catalog-item__type {
@@ -153,6 +184,10 @@
 }
 
 .catalog-item:hover .catalog-item__price {
+  transform: translateY(-400%);
+}
+
+.catalog-item:hover .price {
   transform: translateY(-400%);
 }
 
@@ -253,7 +288,7 @@
 
 .catalog-item__hover-buttons {
   position: absolute;
-  top: 10;
+  top: 10px;
   right: 0;
   margin-top: 10px;
   margin-right: 10px;

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<meta charset="UTF-8">
 
 <head>
+  <title>Book shop</title>
   <script src="https://kit.fontawesome.com/33555cc127.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
   <link
@@ -13,9 +15,9 @@
   <div class="catalog-sort">
     <input class="catalog-sort_hide-checkbox" type="checkbox" id="catalog-sort_hide-checkbox">
     <label for="catalog-sort_hide-checkbox">Show hidden</label>
-    <button class="catalog-sort__sort-button all active">All</button>
-    <button class="catalog-sort__sort-button favourite">Favourite</button>
-    <button class="catalog-sort__sort-button comparison">Comparison</button>
+    <button class="catalog-sort__sort-button all active" data-filter="all">All</button>
+    <button class="catalog-sort__sort-button favourite" data-filter="favourite">Favourite</button>
+    <button class="catalog-sort__sort-button comparison" data-filter="comparison">Comparison</button>
   </div>
 
   <div class="catalog-grid">
@@ -33,9 +35,11 @@
           <span class="star five"></span>
           <span class="star"></span>
         </div>
-        <h2 class="catalog-item__title">Item name</h2>
-        <p class="catalog-item__description">Item description</p>
-        <span class="catalog-item__price">$9.99</span>
+        <h2 class="catalog-item__title">Alone</h2>
+        <p class="catalog-item__description">Modern horror story</p>
+        <div class="price">
+          <span class="catalog-item__price">$9.99</span>
+        </div>
         <div class="catalog-item__button-box">
           <button class="catalog-item__button">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -49,9 +53,9 @@
       </div>
     </article>
 
-    <article class="catalog-item" id="100002">
+    <article class="catalog-item new" id="100002">
       <div class="catalog-item__image">
-        <img src="https://www.collinsdictionary.com/images/full/book_181404689_1000.jpg">
+        <img src="https://d4804za1f1gw.cloudfront.net/wp-content/uploads/sites/5/2021/11/97801437748531.jpg">
       </div>
       <div class="catalog-item__content">
         <p class="catalog-item__type">BOOK</p>
@@ -62,9 +66,11 @@
           <span class="star on"></span>
           <span class="star four"></span>
         </div>
-        <h2 class="catalog-item__title">Item name very long name</h2>
-        <p class="catalog-item__description">Item description</p>
-        <span class="catalog-item__price">$9.99</span>
+        <h2 class="catalog-item__title">Things I learned at art school</h2>
+        <p class="catalog-item__description">Facinating story about art</p>
+        <div class="price">
+          <span class="catalog-item__price">$9.99</span>
+        </div>
         <div class="catalog-item__button-box">
           <button class="catalog-item__button">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -91,9 +97,11 @@
           <span class="star"></span>
           <span class="star"></span>
         </div>
-        <h2 class="catalog-item__title">Item name</h2>
-        <p class="catalog-item__description">Item description</p>
-        <span class="catalog-item__price">$9.99</span>
+        <h2 class="catalog-item__title">Book of night</h2>
+        <p class="catalog-item__description">Bestselling novel of great YA author, bright and cool</p>
+        <div class="price">
+          <span class="catalog-item__price sale">$9.99</span> <s class="catalog-item__price"> $15.99</s>
+        </div>
         <div class="catalog-item__button-box">
           <button class="catalog-item__button">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -107,9 +115,9 @@
       </div>
     </article>
 
-    <article class="catalog-item" id="100004">
+    <article class="catalog-item new" id="100004">
       <div class="catalog-item__image">
-        <img src="https://s3-goods.ozstatic.by/1000/704/141/101/101141704_0.jpg">
+        <img src="https://s26162.pcdn.co/wp-content/uploads/2020/01/Sin-Eater-by-Megan-Campisi.jpg">
       </div>
       <div class="catalog-item__content">
         <p class="catalog-item__type">BOOK</p>
@@ -120,9 +128,42 @@
           <span class="star"></span>
           <span class="star"></span>
         </div>
-        <h2 class="catalog-item__title">Item name</h2>
-        <p class="catalog-item__description">Item description</p>
-        <span class="catalog-item__price">$9.99</span>
+        <h2 class="catalog-item__title">Sin eater</h2>
+        <p class="catalog-item__description">True horror</p>
+        <div class="price">
+          <span class="catalog-item__price">$34.00</span>
+        </div>
+        <div class="catalog-item__button-box">
+          <button class="catalog-item__button">
+            <i class="fa-solid fa-bag-shopping"></i>
+            Add to cart</button>
+        </div>
+      </div>
+      <div class="catalog-item__hover-buttons">
+        <button class="catalog-item__hover-button hide"><i class="fa-regular fa-eye"></i></button>
+        <button class="catalog-item__hover-button favourite"> <i class="fa-regular fa-heart"></i></button>
+        <button class="catalog-item__hover-button comparison"> <i class="fa-solid fa-scale-balanced"></i></button>
+      </div>
+    </article>
+
+    <article class="catalog-item new" id="100005">
+      <div class="catalog-item__image">
+        <img src="https://www.writersdigest.com/.image/t_share/MTcxMDY0NzcxMzIzNTY5NDEz/image-placeholder-title.jpg">
+      </div>
+      <div class="catalog-item__content">
+        <p class="catalog-item__type">BOOK</p>
+        <div class="catalog-item_rating">
+          <span class="star on"></span>
+          <span class="star on"></span>
+          <span class="star on"></span>
+          <span class="star three"></span>
+          <span class="star"></span>
+        </div>
+        <h2 class="catalog-item__title">Educated</h2>
+        <p class="catalog-item__description">Learn about learners</p>
+        <div class="price">
+          <span class="catalog-item__price">$19.99</span>
+        </div>
         <div class="catalog-item__button-box">
           <button class="catalog-item__button">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -137,9 +178,9 @@
     </article>
 
 
-    <article class="catalog-item" id="100005">
+    <article class="catalog-item" id="100006">
       <div class="catalog-item__image">
-        <img src="https://s3-goods.ozstatic.by/1000/704/141/101/101141704_0.jpg">
+        <img src="https://covers.christchurchcitylibraries.com/Covers/875A03A3-2B63-4543-AB0F-AD1151F85F34.jpg">
       </div>
       <div class="catalog-item__content">
         <p class="catalog-item__type">BOOK</p>
@@ -150,9 +191,11 @@
           <span class="star three"></span>
           <span class="star"></span>
         </div>
-        <h2 class="catalog-item__title">Item name</h2>
-        <p class="catalog-item__description">Item description</p>
-        <span class="catalog-item__price">$9.99</span>
+        <h2 class="catalog-item__title">The bones of you</h2>
+        <p class="catalog-item__description">A novel</p>
+        <div class="price">
+          <span class="catalog-item__price">$5.99</span>
+        </div>
         <div class="catalog-item__button-box">
           <button class="catalog-item__button">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -166,9 +209,9 @@
       </div>
     </article>
 
-    <article class="catalog-item" id="100005">
+    <article class="catalog-item" id="100007">
       <div class="catalog-item__image">
-        <img src="https://s3-goods.ozstatic.by/1000/704/141/101/101141704_0.jpg">
+        <img src="https://news.harvard.edu/wp-content/uploads/2022/07/20220727_books_invisibleman_2500-655x1024.jpg">
       </div>
       <div class="catalog-item__content">
         <p class="catalog-item__type">BOOK</p>
@@ -179,9 +222,11 @@
           <span class="star three"></span>
           <span class="star"></span>
         </div>
-        <h2 class="catalog-item__title">Item name</h2>
-        <p class="catalog-item__description">Item description</p>
-        <span class="catalog-item__price">$9.99</span>
+        <h2 class="catalog-item__title">Invisible man</h2>
+        <p class="catalog-item__description">Immortal classic for young readers</p>
+        <div class="price">
+          <span class="catalog-item__price">$8.00</span>
+        </div>
         <div class="catalog-item__button-box">
           <button class="catalog-item__button">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -195,9 +240,9 @@
       </div>
     </article>
 
-    <article class="catalog-item" id="100005">
+    <article class="catalog-item" id="100008">
       <div class="catalog-item__image">
-        <img src="https://s3-goods.ozstatic.by/1000/704/141/101/101141704_0.jpg">
+        <img src="https://covers.christchurchcitylibraries.com/Covers/9781760878856.jpg">
       </div>
       <div class="catalog-item__content">
         <p class="catalog-item__type">BOOK</p>
@@ -208,9 +253,11 @@
           <span class="star three"></span>
           <span class="star"></span>
         </div>
-        <h2 class="catalog-item__title">Item name</h2>
-        <p class="catalog-item__description">Item description</p>
-        <span class="catalog-item__price">$9.99</span>
+        <h2 class="catalog-item__title">Before you knew my name</h2>
+        <p class="catalog-item__description">Heartbreaker</p>
+        <div class="price">
+          <span class="catalog-item__price">$39.99</span>
+        </div>
         <div class="catalog-item__button-box">
           <button class="catalog-item__button">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -224,9 +271,9 @@
       </div>
     </article>
 
-    <article class="catalog-item" id="100005">
+    <article class="catalog-item" id="100009">
       <div class="catalog-item__image">
-        <img src="https://s3-goods.ozstatic.by/1000/704/141/101/101141704_0.jpg">
+        <img src="https://covers.christchurchcitylibraries.com/Covers/9781250058263.jpg">
       </div>
       <div class="catalog-item__content">
         <p class="catalog-item__type">BOOK</p>
@@ -234,12 +281,14 @@
           <span class="star on"></span>
           <span class="star on"></span>
           <span class="star on"></span>
+          <span class="star on"></span>
           <span class="star three"></span>
-          <span class="star"></span>
         </div>
-        <h2 class="catalog-item__title">Item name</h2>
-        <p class="catalog-item__description">Item description</p>
-        <span class="catalog-item__price">$9.99</span>
+        <h2 class="catalog-item__title">The Adventuress</h2>
+        <p class="catalog-item__description">For ladies</p>
+        <div class="price">
+          <span class="catalog-item__price">$13.99</span>
+        </div>
         <div class="catalog-item__button-box">
           <button class="catalog-item__button">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -253,22 +302,24 @@
       </div>
     </article>
 
-    <article class="catalog-item" id="100005">
+    <article class="catalog-item" id="1000010">
       <div class="catalog-item__image">
-        <img src="https://s3-goods.ozstatic.by/1000/704/141/101/101141704_0.jpg">
+        <img src="https://covers.christchurchcitylibraries.com/Covers/9781455572380.jpg">
       </div>
       <div class="catalog-item__content">
         <p class="catalog-item__type">BOOK</p>
         <div class="catalog-item_rating">
-          <span class="star on"></span>
-          <span class="star on"></span>
-          <span class="star on"></span>
-          <span class="star three"></span>
+          <span class="star five"></span>
+          <span class="star"></span>
+          <span class="star"></span>
+          <span class="star"></span>
           <span class="star"></span>
         </div>
-        <h2 class="catalog-item__title">Item name</h2>
-        <p class="catalog-item__description">Item description</p>
-        <span class="catalog-item__price">$9.99</span>
+        <h2 class="catalog-item__title">The Snake, the Crocodile, and the Dog</h2>
+        <p class="catalog-item__description">A novel</p>
+        <div class="price">
+          <span class="catalog-item__price">$0.99</span>
+        </div>
         <div class="catalog-item__button-box">
           <button class="catalog-item__button">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -282,9 +333,40 @@
       </div>
     </article>
 
-    <article class="catalog-item" id="100005">
+    <article class="catalog-item" id="1000011">
       <div class="catalog-item__image">
-        <img src="https://s3-goods.ozstatic.by/1000/704/141/101/101141704_0.jpg">
+        <img src="https://covers.christchurchcitylibraries.com/Covers/9781432896454.jpg">
+      </div>
+      <div class="catalog-item__content">
+        <p class="catalog-item__type">BOOK</p>
+        <div class="catalog-item_rating">
+          <span class="star on"></span>
+          <span class="star on"></span>
+          <span class="star on"></span>
+          <span class="star on"></span>
+          <span class="star five"></span>
+        </div>
+        <h2 class="catalog-item__title">Just the Nicest Couple</h2>
+        <p class="catalog-item__description">A novel</p>
+        <div class="price">
+          <span class="catalog-item__price">$15.99</span>
+        </div>
+        <div class="catalog-item__button-box">
+          <button class="catalog-item__button">
+            <i class="fa-solid fa-bag-shopping"></i>
+            Add to cart</button>
+        </div>
+      </div>
+      <div class="catalog-item__hover-buttons">
+        <button class="catalog-item__hover-button hide"><i class="fa-regular fa-eye"></i></button>
+        <button class="catalog-item__hover-button favourite"> <i class="fa-regular fa-heart"></i></button>
+        <button class="catalog-item__hover-button comparison"> <i class="fa-solid fa-scale-balanced"></i></button>
+      </div>
+    </article>
+
+    <article class="catalog-item" id="1000012">
+      <div class="catalog-item__image">
+        <img src="https://covers.christchurchcitylibraries.com/Covers/9780008400163.jpg">
       </div>
       <div class="catalog-item__content">
         <p class="catalog-item__type">BOOK</p>
@@ -295,9 +377,11 @@
           <span class="star three"></span>
           <span class="star"></span>
         </div>
-        <h2 class="catalog-item__title">Item name</h2>
-        <p class="catalog-item__description">Item description</p>
-        <span class="catalog-item__price">$9.99</span>
+        <h2 class="catalog-item__title">The vow</h2>
+        <p class="catalog-item__description">Breathtaking</p>
+        <div class="price">
+          <span class="catalog-item__price">$55.99</span>
+        </div>
         <div class="catalog-item__button-box">
           <button class="catalog-item__button">
             <i class="fa-solid fa-bag-shopping"></i>
@@ -311,6 +395,5 @@
       </div>
     </article>
   </div>
-
   <script src="js/sort-buttons.js"></script>
 </body>

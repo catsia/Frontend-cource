@@ -1,28 +1,52 @@
 const catalogItems = document.querySelectorAll('.catalog-item');
 const showHiddenCheckbox = document.querySelector('.catalog-sort_hide-checkbox');
-const showAllButton = document.querySelector(".catalog-sort__sort-button.all");
-const showFavouriteButton = document.querySelector(".catalog-sort__sort-button.favourite");
-const showComparisonButton = document.querySelector(".catalog-sort__sort-button.comparison");
+
+const catalogSort = document.querySelector(".catalog-sort");
 
 const favouriteItems = [];
 const comparisonItems = [];
 const hiddenItems = [];
 
-function toggleShowButtons(all, favourite, comparison) {
-  showAllButton.classList.remove('active');
-  showFavouriteButton.classList.remove('active');
-  showComparisonButton.classList.remove('active');
+catalogSort.addEventListener('click', function (e) {
+  var target = e.target;
+  if (target.classList.contains('catalog-sort__sort-button') && !target.classList.contains('active')) {
+    document.querySelectorAll('.catalog-sort__sort-button').forEach(function (button) {
+      if (button.dataset.filter == target.dataset.filter) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
+  }
 
-  if (all) {
-    showAllButton.classList.toggle('active');
-  }
-  if (favourite) {
-    showFavouriteButton.classList.toggle('active');
-  }
-  if (comparison) {
-    showComparisonButton.classList.toggle('active');
-  }
-}
+  catalogItems.forEach(function (catalogItem) {
+    switch (target.dataset.filter) {
+      case 'all':
+        catalogItem.style.display = 'flex';
+        showHiddenAll();
+        break;
+      case 'favourite':
+        if (catalogItem.classList.contains('favourite')) {
+          catalogItem.style.display = 'flex';
+          showHiddenFavourite();
+        } else {
+          catalogItem.style.display = 'none';
+        }
+        break;
+      case 'comparison':
+        if (catalogItem.classList.contains('comparison')) {
+          catalogItem.style.display = 'flex';
+          showHiddenComparison();
+        } else {
+          catalogItem.style.display = 'none';
+        }
+        break;
+
+    }
+
+  });
+});
+
 
 function showHiddenComparison() {
   if (showHiddenCheckbox.checked) {
@@ -65,6 +89,9 @@ function showHiddenAll() {
 }
 
 function showHidden() {
+  const showAllButton = document.querySelector(".catalog-sort__sort-button.all");
+  const showFavouriteButton = document.querySelector(".catalog-sort__sort-button.favourite");
+  const showComparisonButton = document.querySelector(".catalog-sort__sort-button.comparison");
   if (showFavouriteButton.classList.contains('active')) {
     showHiddenFavourite();
   } else if (showComparisonButton.classList.contains('active')) {
@@ -74,53 +101,11 @@ function showHidden() {
   }
 }
 
-function showAll() {
-  toggleShowButtons(true, false, false);
-  catalogItems.forEach(function (catalogItem) {
-    catalogItem.style.display = 'flex';
-    showHiddenAll();
-  });
-}
-
-function showComparison() {
-  toggleShowButtons(false, false, true);
-  catalogItems.forEach(function (catalogItem) {
-    if (catalogItem.classList.contains('comparison')) {
-      catalogItem.style.display = 'flex';
-      showHiddenComparison();
-    } else {
-      catalogItem.style.display = 'none';
-    }
-  });
-}
-
-function showFavourite() {
-  toggleShowButtons(false, true, false);
-  catalogItems.forEach(function (catalogItem) {
-    if (catalogItem.classList.contains('favourite')) {
-      catalogItem.style.display = 'flex';
-      showHiddenFavourite();
-    } else {
-      catalogItem.style.display = 'none';
-    }
-  });
-}
 
 showHiddenCheckbox.addEventListener('change', function () {
   showHidden();
 });
 
-showAllButton.addEventListener('click', function () {
-  showAll();
-});
-
-showComparisonButton.addEventListener('click', function () {
-  showComparison();
-});
-
-showFavouriteButton.addEventListener('click', function () {
-  showFavourite();
-});
 
 catalogItems.forEach(function (catalogItem) {
   const hideButton = catalogItem.querySelector('.catalog-item__hover-button.hide');
